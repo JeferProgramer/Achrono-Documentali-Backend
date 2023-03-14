@@ -1,5 +1,5 @@
-import app from "./app";
-import connectDB from "./db";
+import app from "./src/app";
+import connectDB from "./src/db";
 
 try {
     app.listen(app.get('port'))
