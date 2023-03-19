@@ -2,7 +2,6 @@ const stripeAPI = require('stripe')('sk_test_51Mi3c7DX8XlPJvtBiLBBXDHXAPRFr0ySsh
 /* const domainUrl = process.env.WEB_APP_URL; */
 
 const createCheckoutSession = async (req, res) => {
-   //const domainUrl = 'https://terapeando.vercel.app'
    const domainUrl = 'http://localhost:3000'
    const { line_items, customer_email } = req.body;
 
