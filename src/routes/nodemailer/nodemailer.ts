@@ -30,7 +30,7 @@ const ForgotPassword = async (req: Request, res: Response) => {
       port: 465,
       secure: true,
       auth: {
-        user: "terapeandoportal@gmail.com",
+        user: "AchronoDocumentaliportal@gmail.com",
         pass: "pezufzhvclfbmuti"
       },
       tls: {
@@ -49,11 +49,11 @@ const ForgotPassword = async (req: Request, res: Response) => {
     try {
 
       const sendEmail = await transporter.sendMail({
-        from: `Terapeando <terapeandoportal@gmail.com>`,
+        from: `AchronoDocumentali <AchronoDocumentaliportal@gmail.com>`,
         to: `${email}`,
-        subject: "Recuperación de contraseña Terapeando",
+        subject: "Recuperación de contraseña AchronoDocumentali",
         text: `Hola ${user[0].firstName} tu nueva contraseña para iniciar sesión es: ${newPassword}`,
-        html: `<strong>Hola ${user[0].firstName}!  tu nueva contraseña para iniciar sesión es: ${newPassword} </strong><a href= https://terapeando.vercel.app/signin>ir a Terapeando</a>`,
+        html: `<strong>Hola ${user[0].firstName}!  tu nueva contraseña para iniciar sesión es: ${newPassword} </strong><a href= https://AchronoDocumentali.vercel.app/signin>ir a AchronoDocumentali</a>`,
         headers: { 'x-myheader': 'test header' }
       }).then(async () => {
 

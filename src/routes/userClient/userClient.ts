@@ -8,13 +8,13 @@ const nodemailer = require("nodemailer");
 
 const getUserClient = async (req: Request, res: Response) => {
   try {
-    console.log("user",req.user);
-    
-     const userClient = await userClientModel.findById(req.user);
-     res.status(200).json(userClient);
+    console.log("user", req.user);
+
+    const userClient = await userClientModel.findById(req.user);
+    res.status(200).json(userClient);
   }
   catch (err) {
-     res.status(404).send(err);
+    res.status(404).send(err);
   }
 };
 
@@ -65,7 +65,7 @@ const createUserClient = async (req: Request, res: Response) => {
         port: 465,
         secure: true,
         auth: {
-          user: "terapeandoportal@gmail.com",
+          user: "AchronoDocumentaliportal@gmail.com",
           pass: "pezufzhvclfbmuti",
         },
         tls: {

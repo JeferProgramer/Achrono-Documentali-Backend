@@ -62,14 +62,14 @@ const getUserPsychologist = async (
 
     if (name) {
       userPsychologistModel.find(
-          {
-            $or: [
-              { firstName: { $regex: name, $options: "i" } },
-              { lastName: { $regex: name, $options: "i" } },
-            ],
-          },
-          "-password"
-        )
+        {
+          $or: [
+            { firstName: { $regex: name, $options: "i" } },
+            { lastName: { $regex: name, $options: "i" } },
+          ],
+        },
+        "-password"
+      )
         .then((psychologist) => {
           res.status(200).json(psychologist);
         })
@@ -141,7 +141,7 @@ const postUserPsychologist = async (req: Request, res: Response) => {
         port: 465,
         secure: true,
         auth: {
-          user: "terapeandoportal@gmail.com",
+          user: "AchronoDocumentaliportal@gmail.com",
           pass: "pezufzhvclfbmuti",
         },
 
@@ -155,12 +155,12 @@ const postUserPsychologist = async (req: Request, res: Response) => {
       });
 
       let mailOptions = {
-        from: `Terapeando <terapeandoportal@gmail.com>`,
+        from: `AchronoDocumentali <AchronoDocumentaliportal@gmail.com>`,
         to: `${email}`,
         subject: "Confirmacion de registro",
-        html: `<h1>Bienvenido ${firstname} ${lastname} a Terapeando!</h1>
+        html: `<h1>Bienvenido ${firstname} ${lastname} a AchronoDocumentali!</h1>
                   <p>Tu cuenta para ${email} ha sido creada con éxito.
-                  Para ingresar a tu cuenta haz click <a href= https://terapeando.vercel.app/signin>aqui<a/></p>
+                  Para ingresar a tu cuenta haz click <a href= https://AchronoDocumentali.vercel.app/signin>aqui<a/></p>
             `,
       };
 

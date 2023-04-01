@@ -65,8 +65,8 @@ const getUserPsychologist = (req, res, next) => __awaiter(void 0, void 0, void 0
                 ],
             }, "-password")
                 .then((psychologist) => {
-                res.status(200).json(psychologist);
-            })
+                    res.status(200).json(psychologist);
+                })
                 .catch((error) => next(error));
         }
         else {
@@ -118,7 +118,7 @@ const postUserPsychologist = (req, res) => __awaiter(void 0, void 0, void 0, fun
                 port: 465,
                 secure: true,
                 auth: {
-                    user: "terapeandoportal@gmail.com",
+                    user: "AchronoDocumentaliportal@gmail.com",
                     pass: "pezufzhvclfbmuti",
                 },
                 tls: {
@@ -129,12 +129,12 @@ const postUserPsychologist = (req, res) => __awaiter(void 0, void 0, void 0, fun
                 console.log("Ready to send emails");
             });
             let mailOptions = {
-                from: `Terapeando <terapeandoportal@gmail.com>`,
+                from: `AchronoDocumentali <AchronoDocumentaliportal@gmail.com>`,
                 to: `${email}`,
                 subject: "Confirmacion de registro",
-                html: `<h1>Bienvenido ${firstname} ${lastname} a Terapeando!</h1>
+                html: `<h1>Bienvenido ${firstname} ${lastname} a AchronoDocumentali!</h1>
                   <p>Tu cuenta para ${email} ha sido creada con éxito.
-                  Para ingresar a tu cuenta haz click <a href= https://terapeando.vercel.app/signin>aqui<a/></p>
+                  Para ingresar a tu cuenta haz click <a href= https://AchronoDocumentali.vercel.app/signin>aqui<a/></p>
             `,
             };
             yield transporter.sendMail(mailOptions, (error) => {
