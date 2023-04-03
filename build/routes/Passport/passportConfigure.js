@@ -8,7 +8,7 @@
 //     new GoogleStrategy({
 //         clientID: GOOGLE_CLIENT_ID,
 //         clientSecret: GOOGLE_CLIENT_SECRET,
-//         callbackURL: "http://localhost:3000/auth/google/callback",
+//         callbackURL: "https://achronomi-documentali-frontend.vercel.app/auth/google/callback",
 //     }, async (accessToken: string, refreshToken: string, profile: any, done: VerifyCallback) => {
 //         //get the user data from google
 //         const newPsychologist = {
