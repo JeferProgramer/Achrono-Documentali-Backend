@@ -64,7 +64,7 @@ __decorate([
     __metadata("design:type", String)
 ], userClient.prototype, "email", void 0);
 __decorate([
-    (0, typegoose_1.prop)({ required: true }),
+    (0, typegoose_1.prop)(),
     __metadata("design:type", String)
 ], userClient.prototype, "profileImage", void 0);
 __decorate([

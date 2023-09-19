@@ -90,7 +90,7 @@ export class userPsychologist {
   @prop({ required: true })
   Specialties: string[]
 
-  @prop({ required: true })
+  @prop()
   profileImage: string
 
   @prop()

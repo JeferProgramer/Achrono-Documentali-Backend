@@ -60,7 +60,7 @@ export class userClient {
     })
     email: string
 
-    @prop({ required: true })
+    @prop()
     profileImage: string
 
     @prop()
